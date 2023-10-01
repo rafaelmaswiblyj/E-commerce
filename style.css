@@ -1,0 +1,120 @@
+body{
+    margin-top: 8vh;
+    background-color: azure;
+        overflow-x: hidden;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    top: 0px;
+    width: 100vw;
+    height: 8vh;
+    background-color: rgb(204, 204, 204);
+    position: fixed;
+    z-index: 2;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel{
+    background-image: url("https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9zdGF0aWMvaW1hZ2VzL3dlYnNpdGUvMjAyMi0wNS9ybTQyMi0wNzYteC5qcGc.jpg?s=12XEN_JtC_urL8QGGgT2B6ujqs6XO4IppQhb8gLLVTQ");
+    width: 100vw;
+    height: 92vh;
+}
+
+#about_us{
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about_us_container{
+    width: 50%;
+    height: 40%;
+    background-color: aqua;
+}
+
+#catalogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#catalogo_navbar{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+#catalogo_grid{
+    width: 70%;
+    height: 60%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    padding: 8px;
+    gap: 10px;
+}
+
+.productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid blue;
+    border-radius: 2px;
+    height: 300px;
+    width: 200px;
+}
+
+#contacto{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 40%;
+}
+
+.contacto_form{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    background-color: antiquewhite;
+}
+
+p{
+    margin: 0px;
+}
