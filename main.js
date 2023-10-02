@@ -32,9 +32,24 @@ const renderCharacters = charactersList => {
 
 const container = document.querySelector(".carousel");
 
+
+
+const imagenesDeFondo = [
+  "imagen_1.jpg",
+  "imagen_2.jpg",
+  "imagen_3.jpg",
+];
+
+let imagenActual = 0;
+
 const funcionCarousel = () =>{
 
-  container.style.backgroundImage = `url("https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")`;
+  //container.style.backgroundImage = `url("./img/imagen_1.jpg")`;
+
+  imagenActual = (imagenActual + 1) % imagenesDeFondo.length;
+  const nuevaImagen = imagenesDeFondo[imagenActual];
+  console.log(`${nuevaImagen}`);
+  container.style.backgroundImage = `url(./img/${nuevaImagen})`;
 
 }
 
