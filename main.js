@@ -1,4 +1,4 @@
-/*const container = document.getElementById("container");
+const catalogo = document.getElementById("catalogo_grid");
 
 const fetcheando = async () => {
     try {
@@ -18,21 +18,19 @@ const fetcheando = async () => {
   fetcheando();
   
 const renderCharacters1 = (product) =>{
-        return `<div>
-                    <h1>${product.title}</h1>
-                    <p>${product.price}</p>
-        
-                </div>`
+        return `<div class="productos">
+        <h4>${product.title}</h4>
+        <img src="${product.image}" alt="" width="150px" height="150px">
+        <p>$${product.price}</p>
+    </div>`
 }
 
 const renderCharacters = charactersList => {
-    container.innerHTML = charactersList.map(renderCharacters1).join('');
+  catalogo.innerHTML = charactersList.map(renderCharacters1).join('');
   };
-  */
+  
 
-const container = document.querySelector(".carousel");
-
-
+const carousel = document.querySelector(".carousel");
 
 const imagenesDeFondo = [
   "imagen_1.jpg",
@@ -43,15 +41,11 @@ const imagenesDeFondo = [
 let imagenActual = 0;
 
 const funcionCarousel = () =>{
-
-  //container.style.backgroundImage = `url("./img/imagen_1.jpg")`;
-
   imagenActual = (imagenActual + 1) % imagenesDeFondo.length;
   const nuevaImagen = imagenesDeFondo[imagenActual];
   console.log(`${nuevaImagen}`);
-  container.style.backgroundImage = `url(./img/${nuevaImagen})`;
-
+  carousel.style.backgroundImage = `url(./img/${nuevaImagen})`;
 }
 
-container.addEventListener("click", funcionCarousel);
+carousel.addEventListener("click", funcionCarousel);
 

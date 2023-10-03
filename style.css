@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    font-family: "Ubuntu", sans-serif;
+}
+
+h3{
+    margin: 0px;
+}
+
 body{
     margin-top: 8vh;
     background-color: azure;
@@ -50,7 +60,27 @@ nav{
 #about_us_container{
     width: 50%;
     height: 40%;
-    background-color: aqua;
+    background-color: #e7ecef;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.about_us_btn{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #e7ecef;
+    width: 150px;
+    align-self: center;
+}
+
+.about_us_btn_container{
+    width: auto;
+    align-self: center;
 }
 
 #catalogo{
@@ -60,24 +90,47 @@ nav{
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: #6096ba;
 }
 
 #catalogo_navbar{
+    background-color: white;
     width: 70%;
     display: flex;
     justify-content: space-around;
     border: 1px solid black;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#catalogo_navbar > input {
+    border-radius: 10px;
+    padding: 5px;
+    height: 80%;
+    border: 1px solid white;
+}
+
+#catalogo_navbar > button {
+    border-radius: 8px;
+    border: 1px solid white;
+    height: 75%;
+    padding: 0px;
 }
 
 #catalogo_grid{
     width: 70%;
     height: auto;
-    flex-wrap: wrap;
+    flex-direction: column;
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
     padding: 8px;
-    gap: 10px;
+    gap: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: white;
+    overflow: scroll;
 }
 
 .productos{
@@ -87,7 +140,7 @@ nav{
     border: 1px solid blue;
     border-radius: 2px;
     height: 300px;
-    width: 200px;
+    width: 100%;
 }
 
 #contacto{
