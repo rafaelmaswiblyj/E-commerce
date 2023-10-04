@@ -120,7 +120,7 @@ nav{
 
 #catalogo_grid{
     width: 70%;
-    height: auto;
+    height: 80%;
     flex-direction: column;
     border: 1px solid black;
     display: flex;
@@ -175,4 +175,25 @@ p{
 
 .sidebar, .cart{
     cursor: pointer;
+}
+
+#sidebar_ul{
+    position: absolute;
+    top: 8vh;
+    left: 0px;
+    background-color: aquamarine;
+    width: 40%;
+    height: 100vh;
+    padding: 5px;
+}
+
+.hidden{
+    display: none;
+}
+
+#sidebar_ul > li{
+    list-style: none;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
 }
