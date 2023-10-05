@@ -56,3 +56,11 @@ const showSideBar = () =>{
 
 sidebarBtn.addEventListener("click", showSideBar);
 
+const cartBtn = document.querySelector(".cart");
+const cart = document.querySelector(".cart_div");
+
+const showCart = () =>{
+  cart.classList.toggle("hidden");
+}
+
+cartBtn.addEventListener("click", showCart);
