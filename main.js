@@ -64,3 +64,10 @@ const showCart = () =>{
 }
 
 cartBtn.addEventListener("click", showCart);
+
+const formButton = document.querySelector(`#contacto_form_button`);
+
+formButton.addEventListener("click", (e) =>{
+  e.preventDefault;
+  comprobarEmail();
+})

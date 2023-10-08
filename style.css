@@ -154,15 +154,48 @@ nav{
 .contacto_container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 50%;
-    height: 40%;
+    width: 300px;
+    height: 35%;
+    background-color: #6096ba;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contacto_container > h4{
+    margin: 0px;
 }
 
 .contacto_form{
     display: flex;
     flex-direction: column;
+    width: 65%;
+    height: 40%;
+    justify-content: space-between;
+}
+
+.contacto_form > input{
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.contacto_form > button{
+    border: 1px solid black;
+    padding: 2px;
+    width: 50%;
+    align-self: center;
+    border-radius: 7px;
+    margin-top: 5px;
+    transition: .2s;
+}
+
+.contacto_form > button:hover {
+    width: 55%;
+   
 }
 
 footer{
@@ -234,5 +267,12 @@ p{
 
 .product_cart > div > div {
     display: flex;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
