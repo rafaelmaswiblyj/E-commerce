@@ -276,3 +276,11 @@ footer{
     justify-content: space-around;
     align-items: center;
 }
+
+.msg_name_empty, .msg_lastName_empty, .msg_email_empty, .msg_email_invalid{
+    display: none;
+}
+
+.visible{
+    display: flex;
+}

@@ -76,10 +76,14 @@
     <section id="contacto">
         <div class="contacto_container">
             <h4>Leave us your information in this form so we can contact you and resolve your questions.</h4>
-            <form class="contacto_form">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Last Name">
-                <input type="text" placeholder="Email">
+            <form id="contacto_form">
+                <input type="text" placeholder="Name" id="name">
+                <span class="msg_name_empty">El campo está vacío</span>
+                <input type="text" placeholder="Last Name" id="lastName">
+                <span class="msg_lastName_empty">El campo está vacío</span>
+                <input type="text" placeholder="Email" id="email">
+                <span class="msg_email_empty">El campo está vacío</span>
+                <span class="msg_email_invalid">Por favor, escribe un correo válido</span>
                 <button id="contacto_form_button">Submit</button>
             </form>
         </div>

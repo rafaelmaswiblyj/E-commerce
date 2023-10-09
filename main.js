@@ -68,6 +68,73 @@ cartBtn.addEventListener("click", showCart);
 const formButton = document.querySelector(`#contacto_form_button`);
 
 formButton.addEventListener("click", (e) =>{
-  e.preventDefault;
-  comprobarEmail();
+  e.preventDefault();
+  checkForm();
 })
+
+const emailInput = document.getElementById("email");
+const nameInput = document.getElementById("name");
+const lastNameInput = document.getElementById("lastName");
+
+const msgName = document.querySelector(".msg_name_empty");
+const msgLastName = document.querySelector(".msg_lastName_empty");
+const msgEmail = document.querySelector(".msg_email_empty");
+const msgEmailInvalid = document.querySelector(".msg_email_invalid");
+
+const form = document.getElementById("contacto_form");
+
+const resetForm = () =>{
+  msgName.classList.remove("visible");
+  msgLastName.classList.remove("visible");
+  msgEmail.classList.remove("visible");
+  msgEmailInvalid.classList.remove("visible");
+}
+
+checkForm = () =>{
+  checkEmail(emailInput); //checkea que el email no esté vacio y que contenga las arrobas y eso. Si está todo ok, devuelve true, sino, false. Renderiza el error si es necesario
+  checkName(nameInput); //checkea que el nombre no esté vacío. Devuelve true o false y renderiza el error si es necesario
+  checkLastName(lastNameInput); //checkea que el lastname no esté vacío. Devuelve true o false y renderiza el error si es necesario.
+
+if(checkEmail(emailInput) && checkName(nameInput) && checkLastName(lastNameInput)){
+  form.reset();
+  resetForm();
+  alert("Muchas gracias, recibirá un correo nuestro pronto");
+}
+};
+
+const isEmpty = value => !value.length;
+
+const checkEmail = (email) =>{
+  if(isEmpty(email.value)){
+    msgEmail.classList.add("visible");
+    return false;
+  } else if(!validEmail(email.value)){
+    msgEmailInvalid.classList.add("visible");
+    return false;
+  } else{
+    return true;
+  }
+}
+
+const validEmail = (email) =>{
+  const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+  return re.test(email);
+}
+
+const checkName = (name) =>{
+  if(isEmpty(name.value)){
+    msgName.classList.add("visible");
+    return false;
+  }else{
+    return true;
+  }
+}
+
+const checkLastName = (lastname) =>{
+  if(isEmpty(lastname.value)){
+    msgLastName.classList.add("visible");
+    return false;
+  }else{
+    return true;
+  }
+}
